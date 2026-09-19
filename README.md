@@ -2,7 +2,7 @@
 A simple plugin using EXILED to log player connections to a Discord webhook.
 Additionally the plugin checks a few basic things about the player such as RA access or DNT and presents it as 'flags'.
 
-Default config:
+### Default config
 ```yaml
 is_enabled: true
 debug: false
@@ -15,6 +15,14 @@ log_leaves: true
 ```
 The plugin parses `%name%`, `%steamid%`, `%id%` & `%class%` to show appropriately
 
-Example:
-
+### Example
 ![example](example.png)
+
+### Build requirements
+ - dotnet
+ - EXILED 9.14.2
+ - System.Net.Http
+ - System.Text.Json
+ - UnityEngine.CoreModule
+ - Assembly-CSharp-firstpass
+
