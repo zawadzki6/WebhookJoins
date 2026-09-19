@@ -20,7 +20,7 @@ public class Plugin : Plugin<Config> {
 	base.OnEnabled();
     }
     public override void OnDisabled() {
-        Instance = null;
+	Instance = null;
 	Player.Verified -= Events.Joined;
 	if (Config.LogLeaves)
 	    Player.Left -= Events.Left;
