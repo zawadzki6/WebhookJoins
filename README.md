@@ -16,4 +16,5 @@ log_leaves: true
 The plugin parses `%name%`, `%steamid%`, `%id%` & `%class%` to show appropriately
 
 Example:
+
 ![example](example.png)
