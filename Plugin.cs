@@ -8,7 +8,7 @@ public class Plugin : Plugin<Config> {
     public override string Name => "WebhookJoins";
     public override string Author => "Zawadzki Wielki";
     public override string Prefix => "whook_joins";
-    public override Version Version => new Version(1, 1, 1);
+    public override Version Version => new Version(1, 1, 2);
 
     public static Plugin? Instance;
 

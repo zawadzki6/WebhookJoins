@@ -22,7 +22,10 @@ class Requests {
 	if ((int)response.Result.StatusCode != 204) {
 	    response.Result.Content.ReadAsStringAsync().ContinueWith(t => {
 		ReadOnlyMemory<byte> rom = Encoding.UTF8.GetBytes(t.Result);
-		JsonDocument.Parse(rom).RootElement.TryGetProperty("retry_after", out JsonElement ele);
+		if (!JsonDocument.Parse(rom).RootElement.TryGetProperty("retry_after", out JsonElement ele)) {
+		    Log.Error("Failed to get \"retry_after\". Are you sure it's a ratelimit?");
+		    return;
+		}
 		float retry = ele.GetSingle();
 
 		Log.Info($"rate limited! retrying in {retry}");
