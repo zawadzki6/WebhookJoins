@@ -9,6 +9,7 @@ public class Plugin : Plugin<Config> {
     public override string Author => "Zawadzki";
     public override string Prefix => "whook_joins";
     public override Version Version => new Version(1, 2, 0);
+    public override Version RequiredExiledVersion => Exiled.Loader.Loader.Version;
 
     public static Plugin? Instance;
 
