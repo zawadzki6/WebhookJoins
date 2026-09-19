@@ -1,0 +1,6 @@
+Everyone is granted the freedom to run, study, share, modify and redistribute the software in any form under the following conditions:
+
+1. Source code must be provided with the software free of charge.
+2. Redistribution must apply the same license.
+
+Software is provided "As is" with absolutely no warranty.
