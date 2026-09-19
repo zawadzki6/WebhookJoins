@@ -11,9 +11,6 @@
   <ItemGroup>
     <Reference Include="UnityEngine.CoreModule" HintPath="ref/UnityEngine.CoreModule.dll" Private="false" />
     <Reference Include="Assembly-CSharp-firstpass" HintPath="ref/Assembly-CSharp-firstpass.dll" Private="false" />
-    <Reference Include="UnityEngine" HintPath="ref/UnityEngine.dll" Private="false" />
-    <Reference Include="UnityEngine.PhysicsModule" HintPath="ref/UnityEngine.PhysicsModule.dll" Private="false" />
-    <Reference Include="Mirror" HintPath="ref/Mirror.dll" Private="false" />
   </ItemGroup>
 
   <ItemGroup>
