@@ -4,9 +4,7 @@ using System.ComponentModel;
 namespace WebhookJoins;
 
 public class Config : IConfig {
-    [Description("Is the plugin enabled")]
     public bool IsEnabled { get; set; } = true;
-    [Description("Makes the plugin more verbose")]
     public bool Debug { get; set; }
 
     public string WebhookUrl { get; set; } = "";
