@@ -34,6 +34,8 @@ public class Events {
 		flags = flags + "`Whitelist` ";
 	    if (ev.Player.RemoteAdminAccess)
 		flags = flags + "`RemoteAdmin` ";
+	    if (ev.Player.AuthenticationType == Exiled.API.Enums.AuthenticationType.Discord)
+		flags = flags + "`DiscordAuth`";
 
 	    Log.Debug($"parsed flags: {flags}");
 	    if (flags != Plugin.Instance!.Config.Flags) {
