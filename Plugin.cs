@@ -14,23 +14,23 @@ public class Plugin : Plugin<Config> {
 
     public override void OnEnabled() {
         Instance = this;
-	Player.Verified += Events.Joined;
-	if (Config.LogLeaves)
-	    Player.Left += Events.Left;
-	base.OnEnabled();
+        Player.Verified += Events.Joined;
+        if (Config.LogLeaves)
+            Player.Left += Events.Left;
+        base.OnEnabled();
     }
     public override void OnDisabled() {
-	Instance = null;
-	Player.Verified -= Events.Joined;
-	if (Config.LogLeaves)
-	    Player.Left -= Events.Left;
-	base.OnDisabled();
+        Instance = null;
+        Player.Verified -= Events.Joined;
+        if (Config.LogLeaves)
+            Player.Left -= Events.Left;
+        base.OnDisabled();
     }
     public static string Sanitize(string msg) {
-	msg = msg.Replace("`", "\\`");
-	msg = msg.Replace("@everyone", "`@everyone`");
-	msg = msg.Replace("@here", "`@here`");
+        msg = msg.Replace("`", "\\`");
+        msg = msg.Replace("@everyone", "`@everyone`");
+        msg = msg.Replace("@here", "`@here`");
 
-	return msg;
+        return msg;
     }
 }
